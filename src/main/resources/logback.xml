@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%date{HH:mm:ss} [%thread] %-5level %logger{36} [%X{akkaSource}] - %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <logger name="akka.stream" level="DEBUG"/>
+    <!--<logger name="akka" level="INFO"/>-->
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
